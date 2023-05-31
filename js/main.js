@@ -1,8 +1,8 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
-const password = document.getElementById("password");
-const passwordC = document.getElementById("passwordC");
+const pwd = document.getElementById("password");
+const pwdConfirmation = document.getElementById("passwordC");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -13,44 +13,38 @@ form.addEventListener("submit", (e) => {
 function validateInputs() {
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-  const passwordCValue = passwordC.value.trim();
+  const pwdValue = pwd.value.trim();
+  const pwdConfirmationValue = pwdConfirmation.value.trim();
 
   if (usernameValue === "") {
-    console.log("Username is empty");
     setErrorFor(username, "Username cannot be blank");
   } else {
-    console.log("Success");
     setSuccessFor(username);
   }
   if (emailValue === "") {
-    console.log("email is empty");
     setErrorFor(email, "email cannot be blank");
   } else if (!validateEmail(emailValue)) {
-    console.log("Email is not valid");
+    setErrorFor(email, "Not a valid email.");
   } else {
     setSuccessFor(email);
   }
-  if (passwordValue === "") {
-    console.log("password is empty");
-    setErrorFor(password, "password cannot be blank");
+  if (pwdValue === "") {
+    setErrorFor(pwd, "password cannot be blank");
   } else {
-    console.log("Success");
-    setSuccessFor(password);
+    setSuccessFor(pwd);
   }
-  if (passwordCValue === "") {
-    console.log("password confirmation is empty");
-    setErrorFor(passwordC, "password confirmation cannot be blank");
+  if (pwdConfirmationValue === "") {
+    setErrorFor(pwdConfirmation, "password confirmation cannot be blank");
   } else {
-    console.log("Success");
-    setSuccessFor(passwordC);
+    setSuccessFor(pwdConfirmation);
   }
 }
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
-
+  const error = formControl.querySelector("#error");
   formControl.className = "input-control error";
+  error.innerText = message;
 }
 
 function setSuccessFor(input, message) {
