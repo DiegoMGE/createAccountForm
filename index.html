@@ -9,6 +9,31 @@
     <script defer src="js/main.js"></script>
 </head>
 <body>
-    <h1>Registration</h1>
+    <div class="container">
+        <form action="/" id="form">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="">Username</label>
+                <input type="text" id="username" name="username">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="">Email</label>
+                <input type="text" id="email" name="email">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="">Password</label>
+                <input type="password" id="password" name="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="">Password again</label>
+                <input type="password" id="password" name="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
 </body>
 </html>
