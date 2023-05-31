@@ -1,4 +1,4 @@
-# Create Account - Form 💻
+<h1 align="center"> Create Account - Form 💻</h1>
 
 This repo contains multiple versions of Create Account Forms, as a good practice to stay up to date with the basics:
 
