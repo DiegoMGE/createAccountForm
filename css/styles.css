@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 * {
     padding: 0;
@@ -6,43 +6,57 @@
     box-sizing: border-box;
 }
 body {
-    font-family:'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #132B47;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    margin: 0;
 }
-/* ==========
-General CSS for all form
-========== */
+.container {
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    overflow: hidden;
+    max-width: 100%;
+    width: 400px;
+}
+.header {
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #F0F0F0;
+    padding: 20px 40px;
+}
 .form {
-    background-color: whitesmoke;
-    border-radius: 4px;
-    font-size: 12px;
-    padding: 20px;
-    margin: 20vh auto 0 auto;
-    width: 450px;
-}
-.form h1 {
-    color: #0F2027;
-    text-align: center;
+    padding: 30px 40px;
 }
 .input-control {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.input-control label {
+    display: inline-block;
+    font-weight: 300;
+    margin-bottom: 5px;
 }
 .input-control input {
     border: 2px solid #F0F0F0;
     border-radius: 4px;
     display: block;
-    font-size: 12px;
+    font-family: inherit;
+    font-size: 14px;
     padding: 10px;
     width: 100%;
 }
 .input-control input:focus {
     outline: 0;
+    border-color: #777;
 }
 .input-control.success input {
-    border-color: #09C372;
+    border-color: #42A6C8;
 }
 .input-control.error input {
-    border-color: #FF3860;
+    border-color: #E74C3C;
 }
 .input-control .error {
     color: #FF3860;
@@ -54,7 +68,11 @@ General CSS for all form
     background-color: #132B47;
     border: none;
     border-radius: 4px;
-    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-family: inherit;
+    margin-top: 20px;
     padding: 10px; 
     width: 100%;
 }
