@@ -1,5 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+body {
+    font-family:'Lato', sans-serif;
+}
+/* ==========
+General CSS for all form
+========== */
+.form {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 20px;
+    margin: 20vh auto 0 auto;
+    width: 450px;
+}
+.form h1 {
+    color: #0F2027;
+    text-align: center;
+}
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+.input-control input {
+    border: 2px solid #F0F0F0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+.input-control input:focus {
+    outline: 0;
+}
+.input-control.success input {
+    border-color: #09C372;
+}
+.input-control.error input {
+    border-color: #FF3860;
+}
+.input-control .error {
+    color: #FF3860;
+    font-size: 9px;
+    height: 13px;
+}
+.form button {
+    color: #FFF;
+    background-color: #132B47;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px; 
+    width: 100%;
 }
