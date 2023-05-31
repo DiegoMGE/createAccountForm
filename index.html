@@ -10,27 +10,29 @@
 </head>
 <body>
     <div class="container">
-        <form action="/" id="form" class="form">
+        <div class="header">
             <h1>Create Account</h1>
+        </div>
+        <form action="/" id="form" class="form">
             <div class="input-control">
                 <label for="">Username</label>
                 <input type="text" id="username" name="username">
-                <div class="error"></div>
+                <div class="error" id="error"></div>
             </div>
             <div class="input-control">
                 <label for="">Email</label>
                 <input type="text" id="email" name="email" placeholder="youremail@domain.com">
-                <div class="error"></div>
+                <div class="error" id="error"></div>
             </div>
             <div class="input-control">
                 <label for="">Password</label>
                 <input type="password" id="password" name="password">
-                <div class="error"></div>
+                <div class="error" id="error"></div>
             </div>
             <div class="input-control">
                 <label for="">Password Confirmation</label>
                 <input type="password" id="passwordC" name="password">
-                <div class="error"></div>
+                <div class="error" id="error"></div>
             </div>
             <button type="submit">Sign Up</button>
         </form>
